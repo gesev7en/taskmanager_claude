@@ -1,7 +1,7 @@
 import axios, { AxiosError } from 'axios';
 import { Task, TaskRequest, ApiError } from '../types';
 
-const BASE_URL = '/api/tasks';
+const BASE_URL = `${import.meta.env.VITE_API_BASE_URL ?? ''}/api/tasks`;
 
 const api = axios.create({
   baseURL: BASE_URL,
