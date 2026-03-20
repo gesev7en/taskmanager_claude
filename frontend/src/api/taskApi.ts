@@ -53,7 +53,7 @@ export const taskApi = {
 
   getCategories: async (): Promise<string[]> => {
     try {
-      const res = await axios.get<string[]>('/api/tasks/categories');
+      const res = await api.get<string[]>('/categories');
       return res.data;
     } catch (err) { return handleError(err); }
   },
